@@ -1,0 +1,52 @@
+//
+//  OtherPrefix.pch
+//  JIaYou
+//
+//  Created by lk06 on 2017/4/12.
+//  Copyright © 2017年 lk06. All rights reserved.
+//
+
+#ifndef OtherPrefix_pch
+#define OtherPrefix_pch
+#import "UIColor+CZAddition.h"
+
+#define WBColor(r, g, b, a) [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:a]
+
+#define     DEFAULT_GREEN_COLOR              WBColor(2.0, 187.0, 0.0, 1.0f)
+
+#define HeightFitLimit(w) (HEIGHT_SCREEN > 667.0 ? w : (((w) / 667.0) * HEIGHT_SCREEN))
+
+#define  myNoti    [NSNotificationCenter defaultCenter]
+
+#define WIDTH_SCREEN        [UIScreen mainScreen].bounds.size.width
+
+#define HEIGHT_SCREEN       [UIScreen mainScreen].bounds.size.height
+#define UrlString(x) [NSURL URLWithString:x]
+#define imageNamed(x)  [UIImage imageNamed:x]
+#define KKString(x)  [NSString stringWithFormat:@"%@",x]
+
+#define WIDTHFit(w) (((w) / 375.0) * WIDTH_SCREEN)
+#define HeightFit(w) (((w) / 667.0) * HEIGHT_SCREEN)
+
+#define kDeviceID [[ASIdentifierManager sharedManager].advertisingIdentifier UUIDString]
+
+#define SizeScale        HEIGHT_SCREEN/568
+#define StatusBarHFit    (IS_IPHONE_X ? 44 : 20)
+#define NavHFit          (IS_IPHONE_X ? 88 : 64)
+#define TabBarHFit       (IS_IPHONE_X ? 83 : 49)
+#define BottomYFit       (IS_IPHONE_X ? 43 : 0)
+
+#define iOS7Later ([UIDevice currentDevice].systemVersion.floatValue >= 7.0f)
+#define iOS8Later ([UIDevice currentDevice].systemVersion.floatValue >= 8.0f)
+#define iOS8_3Later ([UIDevice currentDevice].systemVersion.floatValue >= 8.3f)
+#define iOS9Later ([UIDevice currentDevice].systemVersion.floatValue >= 9.0f)
+#define iOS9_1Later ([UIDevice currentDevice].systemVersion.floatValue >= 9.1f)
+#define iOS10Later ([UIDevice currentDevice].systemVersion.floatValue >= 10.0f)
+#define iOS11Later ([UIDevice currentDevice].systemVersion.floatValue >= 11.0f)
+
+#define IS_IPHONE (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+#define IS_IPHONE_X ((IS_IPHONE && HEIGHT_SCREEN == 812.0)? YES : NO)
+
+#endif
+
+
